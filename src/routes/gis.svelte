@@ -1,7 +1,6 @@
 <script>
 	import { Styles } from 'sveltestrap';
 	import { Button, Container, Row, Col } from 'sveltestrap';
-import Region from './backend/region.svelte';
 </script>
 
 <svelte:head>
@@ -20,7 +19,7 @@ import Region from './backend/region.svelte';
 		</Col>
 		<Col>This will contain the map</Col>
 		<Col>
-			<Region/>
+
 		</Col>
 	</Row>
 </Container>
