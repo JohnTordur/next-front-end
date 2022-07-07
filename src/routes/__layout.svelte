@@ -10,7 +10,8 @@
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<p>SenseFence Aps CVR:DK 12345 <br>
+	Fyrrebakken 2, Morud, Denmark</p>
 </footer>
 
 <style>

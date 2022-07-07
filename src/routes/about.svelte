@@ -14,13 +14,16 @@
 	export const prerender = true;
 </script>
 
+<script>
+	export let message;
+</script>
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
 <div class="content">
-	<h1>About this app</h1>
+	<h1>{message}</h1>
 
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the

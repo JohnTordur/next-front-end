@@ -11,6 +11,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@beyonk/svelte-mapbox": "^8.1.4",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"eslint": "^8.16.0",
@@ -18,11 +19,13 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
-		"svelte": "^3.46.0"
+		"svelte": "^3.48.0"
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth0/auth0-spa-js": "^1.22.1",
 		"@fontsource/fira-mono": "^4.5.0",
-		"cookie": "^0.4.1"
+		"cookie": "^0.4.1",
+		"sveltestrap": "^5.9.0"
 	}
 }
