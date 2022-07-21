@@ -1,46 +1,31 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+	import { session } from '$app/stores';
 </script>
 
-<Header />
+<svelte:head>
+	<title>SenseFence App</title>
+</svelte:head>
 
-<main>
-	<slot />
-</main>
+<nav>
+	<a href="/">Home</a>
+	{#if !$session.user}
+		<a href="/auth/login">Login</a>
+		<a href="/auth/register">Register</a>
+	{/if}
+
+	{#if $session.user}
+		<a href="/protected">Admin</a>
+		<a href="/auth/logout">Log Out</a>
+		<a href="/app/map">Map</a>
+		<a href="/app/real-time">Real Time</a>
+	{/if}
+</nav>
+
+<slot />
 
 <footer>
-	<p>SenseFence Aps CVR:DK 12345 <br>
-	Fyrrebakken 2, Morud, Denmark</p>
+	<p>
+		SenseFence Aps CVR:DK 12345 <br />
+		Fyrrebakken 2, Morud, Denmark
+	</p>
 </footer>
-
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
-</style>
